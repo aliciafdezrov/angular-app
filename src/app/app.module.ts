@@ -13,7 +13,8 @@ import { CrudComponent } from './crud/crud.component';
 import { ProfileComponent } from './profile/profile.component';
 import {MenuComponent} from "./layout/menu/menu.component";
 import {MaterialExampleModule} from './material.module';
-import {HeaderComponent} from "./layout/header/header.component";
+import {ToolbarComponent} from "./layout/toolbar/toolbar.component";
+import {PublicMenuComponent} from "./layout/public-menu/public-menu.component";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {HeaderComponent} from "./layout/header/header.component";
     GalleryComponent,
     CrudComponent,
     ProfileComponent,
-    HeaderComponent,
+    ToolbarComponent,
+    PublicMenuComponent,
   ],
   imports: [
     BrowserModule,
