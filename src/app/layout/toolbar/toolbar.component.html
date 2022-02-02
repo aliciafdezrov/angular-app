@@ -5,6 +5,7 @@
     </button>
     <span>Miniapp Angular</span>
     <span class="example-spacer"></span>
+    <label *ngIf="isPrivateMenuVisible()">{{getUserName()}}</label>
     <button *ngIf="isPrivateMenuVisible()" (click)="logout()" matTooltip="Logout from the app" mat-icon-button class="logout-icon" aria-label="Logout">
       <mat-icon>input</mat-icon>
     </button>

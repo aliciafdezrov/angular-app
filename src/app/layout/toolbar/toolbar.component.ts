@@ -20,4 +20,8 @@ export class ToolbarComponent implements OnInit {
   logout(): void {
     this.auth.logout();
   }
+
+  getUserName() : string {
+    return this.auth.getUsername();
+  }
 }
