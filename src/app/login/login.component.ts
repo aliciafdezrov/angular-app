@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, ValidationErrors, Validators} from '@angular/forms';
+import {ValidationErrors} from '@angular/forms';
 import {AuthService} from "../services/auth.service";
 import {UserEntity} from "../model/userEntity";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import {UserEntity} from "../model/userEntity";
 export class LoginComponent implements OnInit {
   public user: UserEntity;
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, private router: Router) {
     this.user = {
       email: '',
       password: '',
@@ -55,6 +56,9 @@ export class LoginComponent implements OnInit {
 
   login() {
     const isValidAuthentication = this.authService.login(this.user);
-    console.log(isValidAuthentication);
+
+    if(isValidAuthentication) {
+      this.router.navigate(['/dashboard']);
+    }
   }
 }
