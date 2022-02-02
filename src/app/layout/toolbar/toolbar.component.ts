@@ -16,4 +16,8 @@ export class ToolbarComponent implements OnInit {
   isPrivateMenuVisible(): boolean {
     return this.auth.isLogged();
   }
+
+  logout(): void {
+    this.auth.logout();
+  }
 }
