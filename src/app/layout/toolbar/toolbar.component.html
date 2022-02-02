@@ -13,3 +13,9 @@
     </button>
   </mat-toolbar>
 </p>
+<div *ngIf="isPrivateMenuVisible(); else showThis">
+  <app-menu></app-menu>
+</div>
+<ng-template #showThis>
+  <app-public-menu></app-public-menu>
+</ng-template>

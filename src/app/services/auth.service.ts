@@ -5,21 +5,38 @@ import {UserEntity} from "../model/userEntity";
   providedIn: 'root'
 })
 export class AuthService {
+  private static readonly authorizedEmail: string = "master8@lemoncode.net";
+  private static readonly authorizedPassword: string = "12345678";
+  private user: UserEntity;
 
-  constructor() { }
+  constructor() {
+    this.user = {
+      email: '',
+      password: ''
+    }
+  }
+
+  private isUserAuthorized(user: UserEntity): boolean {
+    return user.email === AuthService.authorizedEmail && user.password === AuthService.authorizedPassword;
+  }
 
   login(user: UserEntity): boolean {
-    return user.email === "master8@lemoncode.net" && user.password === "12345678";
-  }
-  logout(): void {
+    this.user = user;
+    return this.isUserAuthorized(user)
+   }
 
+  logout(): void {
+    this.user = {
+      email: '',
+      password: '',
+    };
   }
 
   isLogged(): boolean {
-    return false;
+    return this.isUserAuthorized(this.user);
   }
 
   getUsername(): string {
-    return '';
+    return this.user.email;
   }
 }

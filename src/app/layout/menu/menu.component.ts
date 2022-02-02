@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {AuthService} from "../../services/auth.service";
+import {UserEntity} from "../../model/userEntity";
 
 @Component({
   selector: 'app-menu',
@@ -11,5 +13,4 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
