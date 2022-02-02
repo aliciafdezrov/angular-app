@@ -2,17 +2,17 @@
 <mat-card class="card">
   <mat-card-title>Login: </mat-card-title>
   <mat-card-content>
-    <form #loginForm="ngForm">
+    <form [formGroup]="loginForm">
       <mat-form-field class="full-width" appearance="fill">
         <mat-label>Username</mat-label>
-        <input matInput name="email" #email="ngModel" [(ngModel)]="user.email" required pattern="^[a-z0-9](\.?[a-z0-9]){5,}@lemoncode.net$">
-        <mat-error *ngIf="email.invalid">{{getEmailErrorMessage(email.errors)}}</mat-error>
+        <input matInput name="email" formControlName="email" required pattern="^[a-z0-9](\.?[a-z0-9]){5,}@lemoncode.net$">
+        <mat-error *ngIf="loginForm.get('email')?.invalid">{{getEmailErrorMessage()}}</mat-error>
       </mat-form-field>
 
       <mat-form-field class="full-width" appearance="fill">
         <mat-label>Password</mat-label>
-        <input matInput name="password" #password="ngModel" [(ngModel)]="user.password" required maxlength="8" minlength="8" pattern="^[0-9]+$">
-        <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage(password.errors)}}</mat-error>
+        <input matInput name="password" formControlName="password" required maxlength="8" minlength="8" pattern="^[0-9]+$">
+        <mat-error *ngIf="loginForm.get('password')?.invalid">{{getPasswordErrorMessage()}}</mat-error>
       </mat-form-field>
     </form>
 
