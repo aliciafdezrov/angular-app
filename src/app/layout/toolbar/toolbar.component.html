@@ -1,12 +1,12 @@
 <p>
   <mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
     <span>Miniapp Angular</span>
     <span class="example-spacer"></span>
-    <label *ngIf="isPrivateMenuVisible()">{{getUserName()}}</label>
-    <button *ngIf="isPrivateMenuVisible()" (click)="logout()" matTooltip="Logout from the app" mat-icon-button class="logout-icon" aria-label="Logout">
+    <label *ngIf="isPrivateMenuVisible()" class="username-label">{{getUserName()}}</label>
+    <button *ngIf="isPrivateMenuVisible()" matTooltip="username" mat-icon-button aria-label="Username">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <button *ngIf="isPrivateMenuVisible()" (click)="logout()" matTooltip="Logout from the app" mat-icon-button aria-label="Logout">
       <mat-icon>input</mat-icon>
     </button>
   </mat-toolbar>
