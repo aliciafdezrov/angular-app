@@ -16,6 +16,7 @@ import {MenuComponent} from "./layout/menu/menu.component";
 import {MaterialExampleModule} from './material.module';
 import {ToolbarComponent} from "./layout/toolbar/toolbar.component";
 import {PublicMenuComponent} from "./layout/public-menu/public-menu.component";
+import {FooterComponent} from "./layout/footer/footer.component";
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {PublicMenuComponent} from "./layout/public-menu/public-menu.component";
     ProfileComponent,
     ToolbarComponent,
     PublicMenuComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
