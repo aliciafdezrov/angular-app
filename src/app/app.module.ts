@@ -17,6 +17,7 @@ import {MaterialExampleModule} from './material.module';
 import {ToolbarComponent} from "./layout/toolbar/toolbar.component";
 import {PublicMenuComponent} from "./layout/public-menu/public-menu.component";
 import {FooterComponent} from "./layout/footer/footer.component";
+import {SlicePipe} from "./pipes/slice.pipe";
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {FooterComponent} from "./layout/footer/footer.component";
     ToolbarComponent,
     PublicMenuComponent,
     FooterComponent,
+    SlicePipe,
   ],
   imports: [
     BrowserModule,
