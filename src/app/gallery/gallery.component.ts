@@ -13,7 +13,6 @@ export class GalleryComponent implements OnInit {
   width: number;
   height: number;
   interval: number | undefined;
-  startPagination: number;
 
   constructor(private photosService: PhotosService) {
     this.photos = photosService.get();
@@ -21,7 +20,6 @@ export class GalleryComponent implements OnInit {
     this.width = 450;
     this.height = 250;
     this.interval = 0;
-    this.startPagination = 0;
   }
 
   ngOnInit(): void {
@@ -68,13 +66,5 @@ export class GalleryComponent implements OnInit {
 
   isTimerDesactivated() {
     return this.interval === 0;
-  }
-
-  paginateForward() {
-    this.startPagination = this.startPagination+3;
-  }
-
-  paginateBackward() {
-    this.startPagination = this.startPagination-3;
   }
 }

@@ -9,15 +9,14 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { GalleryComponent } from './gallery/gallery.component';
 import { CrudComponent } from './crud/crud.component';
 import { ProfileComponent } from './profile/profile.component';
 import {MenuComponent} from "./layout/menu/menu.component";
-import {MaterialExampleModule} from './material.module';
+import {MaterialModule} from './material.module';
 import {ToolbarComponent} from "./layout/toolbar/toolbar.component";
 import {PublicMenuComponent} from "./layout/public-menu/public-menu.component";
 import {FooterComponent} from "./layout/footer/footer.component";
-import {SlicePipe} from "./pipes/slice.pipe";
+import {GalleryModule} from "./gallery/gallery.module";
 
 @NgModule({
   declarations: [
@@ -27,21 +26,20 @@ import {SlicePipe} from "./pipes/slice.pipe";
     LoginComponent,
     AboutComponent,
     DashboardComponent,
-    GalleryComponent,
     CrudComponent,
     ProfileComponent,
     ToolbarComponent,
     PublicMenuComponent,
     FooterComponent,
-    SlicePipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialExampleModule,
+    MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    GalleryModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

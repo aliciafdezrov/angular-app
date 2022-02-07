@@ -1,0 +1,11 @@
+<div class="photos-list">
+  <button mat-icon-button [disabled]="startPagination<3" aria-label="Imagen anterior" (click)="paginateBackward()">
+    <mat-icon>navigate_before</mat-icon>
+  </button>
+  <div *ngFor="let photo of photos | slice:startPagination:startPagination+3">
+    <img [ngClass]="{'photo': selectedPhoto.id === photo.id}" [src]="photo.src" width="70" height="60" [alt]="photo.title" (click)="select(photo)"/>
+  </div>
+  <button mat-icon-button [disabled]="startPagination+3>=photos.length" aria-label="Siguiente imagen" (click)="paginateForward()">
+    <mat-icon>navigate_next</mat-icon>
+  </button>
+</div>

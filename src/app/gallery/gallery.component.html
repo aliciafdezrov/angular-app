@@ -1,6 +1,6 @@
 <div class="container">
-  <img [src]="selectedPhoto?.src" [height]="height" [width]="width" [alt]="selectedPhoto?.title"/>
-  <div class="list">
+  <app-photo-detail [selectedPhoto]="selectedPhoto" [width]="width" [height]="height"></app-photo-detail>
+  <div class="button-list">
     <button mat-raised-button color="primary" [disabled]="selectedPhoto?.id === 1" (click)="previous()">Anterior</button>
     <button mat-raised-button color="primary" [disabled]="selectedPhoto?.id === 8" (click)="next()">Siguiente</button>
     <button mat-raised-button color="accent" (click)="increase()">Aumentar</button>
@@ -10,16 +10,5 @@
       <button mat-raised-button color="warn" (click)="stop()">Stop</button>
     </ng-template>
   </div>
-
-  <div class="list">
-    <button mat-icon-button [disabled]="startPagination<3" aria-label="Imagen anterior" (click)="paginateBackward()">
-    <mat-icon>navigate_before</mat-icon>
-    </button>
-      <div *ngFor="let photo of photos | slice:startPagination:startPagination+3">
-      <img [ngClass]="{'photo': selectedPhoto.id === photo.id}" [src]="photo.src" width="70" height="60" [alt]="photo.title" (click)="select(photo)"/>
-    </div>
-    <button mat-icon-button [disabled]="startPagination+3>=photos.length" aria-label="Siguiente imagen" (click)="paginateForward()">
-    <mat-icon>navigate_next</mat-icon>
-    </button>
-  </div>
+  <app-photos-list (selectEvent)="select($event)" [photos]="photos" [selectedPhoto]="selectedPhoto"></app-photos-list>
 </div>

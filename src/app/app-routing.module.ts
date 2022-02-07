@@ -5,8 +5,8 @@ import {AboutComponent} from "./about/about.component";
 import {LoginComponent} from "./login/login.component";
 import {CrudComponent} from "./crud/crud.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
-import {GalleryComponent} from "./gallery/gallery.component";
 import {ProfileComponent} from "./profile/profile.component";
+import {GalleryComponent} from "./gallery/gallery.component";
 
 const routes: Routes = [
   {
@@ -31,7 +31,7 @@ const routes: Routes = [
   },
   {
     path: 'gallery',
-    component: GalleryComponent
+    component: GalleryComponent,
   },
   {
     path: 'profile',
