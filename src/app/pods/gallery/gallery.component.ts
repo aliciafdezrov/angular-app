@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {PhotosService} from "../services/photos/photos.service";
-import {PhotoEntity} from "../model/photoEntity";
+import {PhotosService} from "./services/photos/photos.service";
+import {PhotoEntity} from "../rotate/model/photoEntity";
 
 @Component({
   selector: 'app-gallery',

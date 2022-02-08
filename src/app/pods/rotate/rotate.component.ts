@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {PhotoEntity} from "../model/photoEntity";
+import {PhotoEntity} from "../../common/model/photoEntity";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({

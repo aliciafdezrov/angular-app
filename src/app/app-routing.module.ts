@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {HomeComponent} from "./home/home.component";
-import {AboutComponent} from "./about/about.component";
-import {LoginComponent} from "./login/login.component";
-import {CrudComponent} from "./crud/crud.component";
-import {DashboardComponent} from "./dashboard/dashboard.component";
-import {ProfileComponent} from "./profile/profile.component";
-import {GalleryComponent} from "./gallery/gallery.component";
-import {RotateComponent} from "./rotate/rotate.component";
+import {HomeComponent} from "./components/home/home.component";
+import {AboutComponent} from "./components/about/about.component";
+import {LoginComponent} from "./pods/login/login.component";
+import {CrudComponent} from "./components/crud/crud.component";
+import {DashboardComponent} from "./components/dashboard/dashboard.component";
+import {ProfileComponent} from "./components/profile/profile.component";
+import {RotateComponent} from "./pods/rotate/rotate.component";
+import {GalleryComponent} from "./pods/gallery/gallery.component";
 
 const routes: Routes = [
   {

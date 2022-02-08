@@ -4,37 +4,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { AboutComponent } from './about/about.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { CrudComponent } from './crud/crud.component';
-import { ProfileComponent } from './profile/profile.component';
-import {MenuComponent} from "./layout/menu/menu.component";
+import { AppComponent } from './scenes/app.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CrudComponent } from './components/crud/crud.component';
+import { ProfileComponent } from './components/profile/profile.component';
 import {MaterialModule} from './material.module';
-import {ToolbarComponent} from "./layout/toolbar/toolbar.component";
-import {PublicMenuComponent} from "./layout/public-menu/public-menu.component";
-import {FooterComponent} from "./layout/footer/footer.component";
-import {GalleryModule} from "./gallery/gallery.module";
-import {RotateComponent} from "./rotate/rotate.component";
-import {RotateDirective} from "./directives/rotate.directive";
+import {RotateModule} from "./pods/rotate/rotate.module";
+import {LoginModule} from "./pods/login/login.module";
+import {ToolbarModule} from "./layout/toolbar/toolbar.module";
+import {FooterModule} from "./layout/footer/footer.module";
+import {GalleryModule} from "./pods/gallery/gallery.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
     HomeComponent,
-    LoginComponent,
     AboutComponent,
     DashboardComponent,
     CrudComponent,
     ProfileComponent,
-    ToolbarComponent,
-    PublicMenuComponent,
-    FooterComponent,
-    RotateComponent,
-    RotateDirective,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +33,11 @@ import {RotateDirective} from "./directives/rotate.directive";
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    RotateModule,
     GalleryModule,
+    LoginModule,
+    ToolbarModule,
+    FooterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

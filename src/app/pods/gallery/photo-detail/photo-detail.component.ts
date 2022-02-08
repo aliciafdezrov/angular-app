@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {PhotoEntity} from "../../model/photoEntity";
+import {Component, Input, OnInit} from '@angular/core';
+import {PhotoEntity} from "../../rotate/model/photoEntity";
 
 @Component({
   selector: 'app-photo-detail',
