@@ -7,6 +7,7 @@ import {CrudComponent} from "./crud/crud.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {ProfileComponent} from "./profile/profile.component";
 import {GalleryComponent} from "./gallery/gallery.component";
+import {RotateComponent} from "./rotate/rotate.component";
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
     path: 'profile',
     component: ProfileComponent
   },
+  {
+    path: 'rotate',
+    component: RotateComponent
+  }
 ];
 
 @NgModule({

@@ -17,6 +17,8 @@ import {ToolbarComponent} from "./layout/toolbar/toolbar.component";
 import {PublicMenuComponent} from "./layout/public-menu/public-menu.component";
 import {FooterComponent} from "./layout/footer/footer.component";
 import {GalleryModule} from "./gallery/gallery.module";
+import {RotateComponent} from "./rotate/rotate.component";
+import {RotateDirective} from "./directives/rotate.directive";
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import {GalleryModule} from "./gallery/gallery.module";
     ToolbarComponent,
     PublicMenuComponent,
     FooterComponent,
+    RotateComponent,
+    RotateDirective,
   ],
   imports: [
     BrowserModule,

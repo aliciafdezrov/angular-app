@@ -1,0 +1,10 @@
+<div class="container">
+  <form [formGroup]="rotateForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Step</mat-label>
+      <input matInput name="step" formControlName="step" placeholder="Step" pattern="\b([0-2]?[0-9]{1,2}|3[0-5][0-9]|360)\b">
+      <mat-error *ngIf="rotateForm.get('step')?.invalid">{{getStepErrorMessage()}}</mat-error>
+    </mat-form-field>
+  </form>
+  <img [src]="photo.src" height="250" width="500" [alt]="photo.title" appRotate="45" [step]="rotateForm.get('step')?.value"/>
+</div>
