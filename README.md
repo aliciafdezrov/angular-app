@@ -21,8 +21,8 @@ Es siempre visible al final de la página.
 ### Menú público
 Inicialmente aparecerá el menu público, que consta de las siguientes entradas: 
 
-- **About**. Página de información sobre el proyecto.
-- **Profile**.
+- **About**. Página de información sobre el proyecto: documentación, ayuda, y fechas.
+- **Home**. Página de bienvenida a la apliación con un enlace a esta documentación para dar soporte al usuario.
 - **Login**. Desde está entrada se puede iniciar sesión, una vez iniciada, la 
 sesión se almacena en el local storage para añadir persistencia a la aplicación. Consta de dos campos:
 
