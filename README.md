@@ -1,27 +1,65 @@
 # MiniappAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0. Para
+arrancar el proyecto ejecutar `ng serve`. Navegar a `http://localhost:4200/`.
 
-## Development server
+## Documentación del proyecto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Toolbar
 
-## Code scaffolding
+El toolbar consta de:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Titulo**. Siempre visible.
+- **Nombre de usuario**. Únicamente es visible cuando el usuario ha iniciado sesión.
+- **Botón de Logout**. Cerrará la sesión, borrando la persistencia guardada en el local storage y
+  redirigiendo a la página de _login_.
 
-## Build
+### Footer
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Es siempre visible al final de la página.
 
-## Running unit tests
+### Menú público
+Inicialmente aparecerá el menu público, que consta de las siguientes entradas: 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **About**. Página de información sobre el proyecto.
+- **Profile**.
+- **Login**. Desde está entrada se puede iniciar sesión, una vez iniciada, la 
+sesión se almacena en el local storage para añadir persistencia a la aplicación. Consta de dos campos:
 
-## Running end-to-end tests
+  - **Usuario**. Sus validaciones son: 
+    1. No puede estar vacío.
+    2. Su dominio debe ser @lemoncode.net
+    
+  - **Password**. Sus validaciones son: 
+    1. Debe tener al menos 8 carácteres.
+    2. Solo admite caracteres numéricos.
+    
+    Para inciar sesión, el usuario/contraseña admitido es:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+usuario: master8@lemoncode.net
+password: 12345678
+```
 
-## Further help
+### Menú privado
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Una vez iniciada sesión,el menu cambiará a un menu privado.
+
+Entradas del menu privado:
+
+- **Dashboard**. 
+- **Gallery**. Galería de fotos, consta de una serie de controles:
+  - **Botón de Siguiente**. Pasar a la siguiente foto de la galería.
+  - **Botón de Anterior**. Pasar a la foto anterior de la galería.
+  - **Botón de Aumentar**. Aumentar el tamaño de la foto seleccionada.
+  - **Botón de Disminuir**. Disminuir el tamaño de la foto seleccionada.
+  - **Botón de Play**. Activa el carrusel de fotografía cambiando la foto seleccionada cada 2 segundos, una vez pulsado cambiará
+  por un **botón de Stop** para parar el carrusel.
+- **CRUD**.
+- **Profile**.
+- **Rotate**. Ejercicio de la directiva Rotate, consta de una única imágen y de un campo step: 
+  - **Imagen**. Inicialmente aparecerá con una rotación de 45 grados. Al hacer click sobre ella, rotará en el _sentido de las agujas del reloj_. Al
+  hacer click sobre ella mientras se mantiene pulsado la tecla Shift, la imagen rotará en _sentido contrario a las agujas del reloj_.
+  - **Campo step**. Su valor por defecto será de 10. Sólo admite _números entre 0 y 360_. Permite configurar los grados en los que rotará la imagen.
+  
+
