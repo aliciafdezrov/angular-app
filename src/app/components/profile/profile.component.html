@@ -1,1 +1,17 @@
-<p>profile works!</p>
+<div class="container">
+  <mat-card class="card">
+    <mat-card-title-group>
+      <mat-card-title>Profile</mat-card-title>
+      <img mat-card-lg-image src="assets/images/user.png" >
+    </mat-card-title-group>
+    <mat-card-content class="content">
+      <div>
+        Has inciado sesión como: <b>{{getUserName()}}</b>
+      </div>
+
+      <button mat-raised-button color="primary" (click)="logout()" matTooltip="Logout from the app" aria-label="Logout">
+        Logout
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>

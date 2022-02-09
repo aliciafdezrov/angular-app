@@ -47,7 +47,7 @@ Una vez iniciada sesión,el menu cambiará a un menu privado.
 
 Entradas del menu privado:
 
-- **Dashboard**. 
+- **Dashboard**. Entrada vacía.
 - **Gallery**. Galería de fotos, consta de una serie de controles:
   - **Botón de Siguiente**. Pasar a la siguiente foto de la galería.
   - **Botón de Anterior**. Pasar a la foto anterior de la galería.
@@ -55,8 +55,10 @@ Entradas del menu privado:
   - **Botón de Disminuir**. Disminuir el tamaño de la foto seleccionada.
   - **Botón de Play**. Activa el carrusel de fotografía cambiando la foto seleccionada cada 2 segundos, una vez pulsado cambiará
   por un **botón de Stop** para parar el carrusel.
-- **CRUD**.
-- **Profile**.
+- **CRUD**. Entrada vacía.
+- **Profile**. Entrada de perfil de usuario, contiene:
+  - **Botón de Logout**. Para cerrar sesión desde la página de perfil.
+  - **Usuario**. Información sobre el usuario con el que se ha iniciado sesión.
 - **Rotate**. Ejercicio de la directiva Rotate, consta de una única imágen y de un campo step: 
   - **Imagen**. Inicialmente aparecerá con una rotación de 45 grados. Al hacer click sobre ella, rotará en el _sentido de las agujas del reloj_. Al
   hacer click sobre ella mientras se mantiene pulsado la tecla Shift, la imagen rotará en _sentido contrario a las agujas del reloj_.
