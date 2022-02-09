@@ -1,7 +1,7 @@
 import {Directive, ElementRef, HostListener, Input, OnInit} from '@angular/core';
 
 @Directive({
-  selector: '[appRotate]'
+  selector: 'img[appRotate]'
 })
 export class RotateDirective implements OnInit {
   // @ts-ignore
