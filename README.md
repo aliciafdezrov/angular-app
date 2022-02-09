@@ -1,6 +1,6 @@
 # MiniappAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0. Para
+Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0. Para
 arrancar el proyecto ejecutar `ng serve`. Navegar a `http://localhost:4200/`.
 
 ## Documentación del proyecto
