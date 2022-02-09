@@ -4,15 +4,15 @@ import {Directive, ElementRef, HostListener, Input, OnInit} from '@angular/core'
   selector: 'img[appRotate]'
 })
 export class RotateDirective implements OnInit {
-  // @ts-ignore
   @Input() step: string;
-  // @ts-ignore
   @Input('appRotate') rotate: string;
   private defaultStep = "10";
   private count: number;
 
   constructor(private el: ElementRef) {
     this.count = 0;
+    this.step = "";
+    this.rotate = "";
   }
 
   private rotateElement(step: number) {
